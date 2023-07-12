@@ -9,7 +9,13 @@ const heading=React.createElement(
 ,{id:"Heading"},
 "Namste react");
 console.log(heading);
+//JSX=>we can use jsx to create html element using this easily in react
+// mearge the html and javascript
+//create h1 tag using jsx// jsx is not html inside javascript,html like syntax or xml
+
+const jsxheading=<h1 id="heading">Namstre ravi</h1>;
+console.log(jsxheading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(jsxheading);
   
