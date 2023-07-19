@@ -20,3 +20,15 @@
 -host on your applicatio on https also rather than http:
 -Tree shaking-remove unused code
 -different dev and prod bundles
+
+/**
+ * header(-logo component nav item)
+ * body
+ * -search (bar ->input)
+ * restaurant card (container)
+ * {img,
+ * name of res,star rating,cuisine,delivery time
+ * }
+ * footer->copyright disclamier,address,contact links
+ *
+ */
