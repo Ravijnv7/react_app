@@ -10,11 +10,11 @@ const RestaurantCard =(props)=>{
         }}>
           <img  alt="res-logo"
           className="res-logo"
-          src={CDN_URL}></img>
-        <h3>{resData.name}</h3>
-        <h4>{resData.cusines.join(",")}</h4>
-        <h4>{resData.rating}</h4>
-        <h4>{resData.avgTime}</h4>
+          src={CDN_URL+resData.info.cloudinaryImageId}></img>
+        <h3>{resData.info.name}</h3>
+        <h4>{resData.info.cuisines.join(",")}</h4>
+        <h4>{resData.info.locality}</h4>
+        <h4>{resData.info.avgRating}</h4>
 
          </div>
                 )

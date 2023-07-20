@@ -32,3 +32,7 @@
  * footer->copyright disclamier,address,contact links
  *
  */
+ # React Hooks
+ normal javascript function-written by facebook developer
+ -useState()-superpowerful state variable in react
+ -useEffect()
