@@ -1,8 +1,24 @@
 import RestaurantCard from "./RestaurantCard"; 
-import resList from "../utils/mokdata";
-import { useState } from "react";
+
+import { useState,useEffect } from "react";
  const Body =()=>{
-  const[listOfRes,setListOfRes]= useState(resList);
+  const[listOfRes,setListOfRes]= useState([]);
+  useEffect(()=>{
+    fetchData();
+  },[]);
+  const fetchData= async ()=>{
+    const data= await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8892684&lng=77.63991&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json =await data.json();
+    console.log(json);
+    setListOfRes(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants
+      )
+  }
+  if(listOfRes==0){
+    return <h1>loading...</h1>
+
+  }
     return(
       <div className="body">
         <div className="filter">
